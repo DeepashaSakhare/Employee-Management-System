@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Employee Management</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="d-flex">
+    <nav class="sidebar p-3">
+      <a href="dashboard.html" class="brand text-decoration-none">
+        <img src="../assets/logo.svg" alt="Acme HR Logo" class="sidebar-logo" />
+        <span class="brand-text">Acme HR Portal</span>
+      </a>
+      <ul class="nav nav-pills flex-column mb-3">
+        <li class="nav-item mb-1"><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+        <li class="nav-item mb-1"><a href="employees.html" class="nav-link">Employee List</a></li>
+        <li class="nav-item mb-1"><a href="addEmployee.html" class="nav-link">Add Employee</a></li>
+      </ul>
+      <button id="logoutBtn" class="btn btn-outline-light w-100 mt-auto">Logout</button>
+    </nav>
+
+    <div class="flex-grow-1">
+      <nav class="navbar navbar-expand-lg navbar-custom px-4 py-3 shadow-sm">
+        <div class="container-fluid">
+          <div class="d-flex align-items-center gap-3">
+            <img src="../assets/logo.svg" alt="Acme HR Logo" class="sidebar-logo" />
+            <div>
+              <span class="navbar-brand mb-0 h1">Dashboard</span>
+              <div class="text-muted small">Acme HR Portal</div>
+            </div>
+          </div>
+          <div class="text-end">
+            <span id="adminName" class="fw-semibold"></span>
+          </div>
+        </div>
+      </nav>
+
+      <main class="p-4">
+        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start gap-3 mb-4">
+          <div>
+            <h1 class="hero-title">Welcome back, <span id="welcomeName"></span></h1>
+            <p class="text-muted">Manage employees, departments, and performance from one admin dashboard.</p>
+          </div>
+        </div>
+
+        <div class="row g-4 mb-4" id="dashboardCards"></div>
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title mb-3">Recent Employees</h5>
+            <div class="table-responsive">
+              <table class="table table-hover align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Status</th>
+                    <th>Joined</th>
+                  </tr>
+                </thead>
+                <tbody id="recentEmployeesBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>
